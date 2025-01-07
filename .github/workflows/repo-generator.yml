@@ -31,6 +31,11 @@ jobs:
         run: |
           python _repo_generator.py
 
+      - name: List files in zips directory
+        run: |
+          ls -l zips/
+
+
       # Step 5: Verificar se os arquivos addons.xml e addons.xml.md5 foram criados
       - name: Verify Generated Files
         run: |
