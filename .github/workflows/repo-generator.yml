@@ -30,9 +30,11 @@ jobs:
 
       # Executa o script `_repo_generator.py`
       - name: Run Repo Generator Script
-        run: python _repo_generator.py
+        run: |
+          echo "Iniciando execução do script _repo_generator.py"
+          python _repo_generator.py
 
-      # Depuração - Verifica se os arquivos estão sendo gerados no diretório correto
+      # Depuração - Verifica a saída do script e os arquivos criados
       - name: Debug File Locations
         run: |
           echo "Verificando arquivos no diretório atual:"
@@ -47,7 +49,9 @@ jobs:
       # Commit e push das mudanças, se os arquivos foram criados
       - name: Commit and Push Changes
         run: |
+          echo "Verificando se os arquivos foram criados corretamente..."
           if [ -f "addons.xml" ] && [ -f "addons.xml.md5" ]; then
+            echo "Arquivos encontrados. Preparando commit..."
             git config --global user.name "GitHub Actions"
             git config --global user.email "noreply@github.com"
             git add addons.xml addons.xml.md5
