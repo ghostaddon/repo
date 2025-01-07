@@ -1,4 +1,4 @@
-name: Update Modules
+name: Update Module
 
 on:
   repository_dispatch:
