@@ -3,6 +3,16 @@ name: Publicar site
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'index.html'
+      - 'style.css'
+      - 'script.js'
+      - '*.png'
+      - '*.jpg'
+      - '*.svg'
+      - '*.ico'
+      - '.nojekyll'
+      - 'CNAME'
 
 jobs:
   deploy-site:
