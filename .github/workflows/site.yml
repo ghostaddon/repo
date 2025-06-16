@@ -20,7 +20,7 @@ jobs:
       uses: actions/configure-pages@v4
 
     - name: Enviar arquivos do site (index.html)
-      uses: actions/upload-pages-artifact@v4
+      uses: actions/upload-pages-artifact@v2
       with:
         path: .  # envia tudo da raiz — incluindo index.html
 
