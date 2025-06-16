@@ -19,3 +19,11 @@ jobs:
 
     - name: Executar script de build (gerar addons.xml, MD5 e ZIPs)
       run: python _repo_generator.py
+
+    - name: Commit e push dos arquivos gerados
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@users.noreply.github.com"
+        git add .
+        git commit -m "Atualização automática: arquivos gerados por build.py" || echo "Nada para commitar"
+        git push
