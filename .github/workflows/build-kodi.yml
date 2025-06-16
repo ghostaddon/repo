@@ -3,6 +3,8 @@ name: Build Kodi Repository
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'repo/**'        # Só roda se algo mudar dentro da pasta repo/
 
 jobs:
   build:
