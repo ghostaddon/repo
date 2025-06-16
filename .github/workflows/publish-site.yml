@@ -11,8 +11,6 @@ on:
       - '*.jpg'
       - '*.svg'
       - '*.ico'
-      - '.nojekyll'
-      - 'CNAME'
 
 jobs:
   deploy-site:
